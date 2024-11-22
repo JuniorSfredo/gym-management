@@ -16,11 +16,17 @@ class TrainingPage extends StatelessWidget {
           title: const Text(
             'Todos os treinos', 
             style: TextStyle(
-              color: Colors.white
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),
-      )
+        body: Container(
+          decoration: const BoxDecoration(
+            color: ColorsConst.dashboardBackground,
+          ),
+        ),
+      ),
     );
   }
 }
