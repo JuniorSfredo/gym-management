@@ -18,8 +18,4 @@ class Pessoa {
     this.ativo,
     this.endereco,
   ) : dataNascimento = DateTime.parse(dataNascimentoString);
-
-  String formatarDataNascimento() {
-    return "${dataNascimento.day}/${dataNascimento.month}/${dataNascimento.year}";
-  }
 }

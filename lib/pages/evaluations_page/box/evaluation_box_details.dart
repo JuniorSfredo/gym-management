@@ -6,7 +6,7 @@ import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/constants/text_style_const.dart';
 import 'package:gym_management/pages/common/formatters/formatter.dart';
 import 'package:gym_management/pages/common/widgets/simple_back_button.dart';
-import 'package:gym_management/pages/evolution_page/desc_evolutions_all/evaluation_box_details_items.dart';
+import 'package:gym_management/pages/evaluations_page/box/item_box/evaluation_box_details_items.dart';
 
 class EvaluationBoxDetail extends StatefulWidget {
   final int avaliacaoId;

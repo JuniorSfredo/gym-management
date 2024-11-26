@@ -4,16 +4,16 @@ import 'package:gym_management/domain/models/simplefied/avaliacao_simplefied.dar
 import 'package:gym_management/domain/services/avaliacao_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/formatters/formatter.dart';
-import 'package:gym_management/pages/evolution_page/desc_evolutions_all/evaluation_box_details.dart';
+import 'package:gym_management/pages/evaluations_page/box/evaluation_box_details.dart';
 
-class AllEvolutionsDesc extends StatefulWidget {
-  const AllEvolutionsDesc({super.key});
+class EvaluationPage extends StatefulWidget {
+  const EvaluationPage({super.key});
 
   @override
-  State<AllEvolutionsDesc> createState() => _AllEvolutionsDescState();
+  State<EvaluationPage> createState() => _EvaluationPageState();
 }
 
-class _AllEvolutionsDescState extends State<AllEvolutionsDesc> {
+class _EvaluationPageState extends State<EvaluationPage> {
   AvaliacaoService avaliacaoService = AvaliacaoService();
   final List<AvaliacaoSimplefied> avaliacoes = [];
   bool isLoading = true;
@@ -145,7 +145,7 @@ class _AllEvolutionsDescState extends State<AllEvolutionsDesc> {
                     width: MediaQuery.of(context).size.width,
                     curve: Curves.easeInOut,
                     decoration: BoxDecoration(
-                      color: const Color.fromARGB(255, 126, 0, 0),
+                      color: ColorsConst.listItemsColor,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Column(

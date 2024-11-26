@@ -1,3 +1,7 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class ApiServiceUrl {
-  static const String baseUrl = 'http://192.168.224.1:8080/';
+  static String get baseUrl {
+    return dotenv.env['API_BASE_URL'] ?? '';
+  }
 }
