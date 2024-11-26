@@ -51,7 +51,7 @@ class _DescTrainingPageState extends State<DescTrainingPage> {
                 ),
                 body: Container(
                   decoration: const BoxDecoration(
-                    color: ColorsConst.dashboardBackground,
+                    color: ColorsConst.dashboardBackground ,
                   ),
                 ),
               ));
