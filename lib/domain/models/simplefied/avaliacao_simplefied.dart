@@ -25,7 +25,7 @@ class AvaliacaoSimplefied {
       json['percentualDeGordura'],
       json['imc'],
       json['observacao'],
-      AlunoReference.fromJSON(json['aluno']),
+      AlunoReference.fromJson(json['aluno']),
       ProfessorReference.fromJSON(json['professor']),
       (json['dobrasCutaneas'] as List).map((dobra) => DobraCutaneaReference.fromJSON(dobra)).toList(),
     );

@@ -14,4 +14,6 @@ class ColorsConst {
   static const Color errorColor = Color(0xFF850900);
   static const Color closeBtnColor = Color(0xFFE10F00);
   static const Color listItemsColor = Color(0xFF7E0000);
+  static const Color pendingItemColor = Color(0xFFFDD469);
+  static const Color aprovedItemColor = Color(0xFF1F4C4D);
 }

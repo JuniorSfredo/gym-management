@@ -1,4 +1,4 @@
-import 'package:gym_management/domain/models/Exercicio.dart';
+import 'package:gym_management/domain/models/exercicio.dart';
 import 'package:gym_management/domain/models/references/aluno_reference.dart';
 import 'package:gym_management/domain/models/references/professor_reference.dart';
 
@@ -22,7 +22,7 @@ class Treino {
     return Treino(
       json['id'],
       json['nome'],
-      AlunoReference.fromJSON(json['aluno']),
+      AlunoReference.fromJson(json['aluno']),
       ProfessorReference.fromJSON(json['professor']),
       (json['exercicios'] as List).map((e) => Exercicio.fromJSON(e)).toList()
     );

@@ -29,7 +29,7 @@ class ButtonConfigs {
       text: 'Pagamentos',
       icon: FontAwesomeIcons.dollarSign,
       onPressed: (context) {
-        print('BTN PRESSED');
+        Navigator.pushNamed(context, '/payments');
       },
     ),
     NavigationItem(

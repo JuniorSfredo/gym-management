@@ -5,7 +5,7 @@ class AlunoReference {
 
   AlunoReference(this.id, this.nome);
 
-  factory AlunoReference.fromJSON(Map<String, dynamic> json) {
+  factory AlunoReference.fromJson(Map<String, dynamic> json) {
     return AlunoReference(
       json['id'],
       json['nome'],

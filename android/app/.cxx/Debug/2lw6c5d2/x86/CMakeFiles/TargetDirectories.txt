@@ -1,0 +1,2 @@
+C:/Users/mrpvp/Desktop/DEV/Flutter/gym_management/android/app/.cxx/Debug/2lw6c5d2/x86/CMakeFiles/edit_cache.dir
+C:/Users/mrpvp/Desktop/DEV/Flutter/gym_management/android/app/.cxx/Debug/2lw6c5d2/x86/CMakeFiles/rebuild_cache.dir

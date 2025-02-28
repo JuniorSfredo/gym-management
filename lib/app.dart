@@ -3,6 +3,8 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:gym_management/pages/dashboard_page/dashboard_page.dart';
 import 'package:gym_management/pages/evaluations_page/evaluations_page.dart';
 import 'package:gym_management/pages/login_page/login_page.dart';
+import 'package:gym_management/pages/payment_page/details/payment_details_page.dart';
+import 'package:gym_management/pages/payment_page/payment_page.dart';
 import 'package:gym_management/pages/splash_page/splash_page.dart';
 import 'package:gym_management/pages/training_page/desc_training/desc_training_page.dart';
 import 'package:gym_management/pages/training_page/training_page.dart';
@@ -34,6 +36,7 @@ class GymManagementApp extends StatelessWidget {
         '/dashboard': (context) => const DashboardPage(),
         '/evolutions/id': (context) => const EvaluationPage(),
         '/training': (context) => const TrainingPage(),
+        '/payments': (context) => const PaymentPage(),
       },
       onGenerateRoute: (settings) {
         if (settings.name == '/alunos/alunoId/treinos/treinoId') {
@@ -43,6 +46,16 @@ class GymManagementApp extends StatelessWidget {
               return DescTrainingPage(
                 treinoId: args['treinoId']!,
                 alunoId: args['alunoId']!,
+              );
+            },
+          );
+        }
+        if (settings.name == '/mensalidades/id') {
+          final args = settings.arguments as int;
+          return MaterialPageRoute(
+            builder: (context) {
+              return PaymentDetailsPage(
+                id: args.toInt(),
               );
             },
           );
