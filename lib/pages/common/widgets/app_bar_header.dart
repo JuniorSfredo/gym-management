@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 
 class AppBarHeader extends StatelessWidget implements PreferredSizeWidget {
 
   final String title;
+  final String? backRoute;
 
-  const AppBarHeader({required this.title, super.key});
+  const AppBarHeader({required this.title, this.backRoute, super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +16,12 @@ class AppBarHeader extends StatelessWidget implements PreferredSizeWidget {
       backgroundColor: ColorsConst.btnLoginColor,
       leading: IconButton(
         onPressed: () {
-          Navigator.pushReplacementNamed(context, '/payments');
+          if (backRoute != null) {
+            context.go(backRoute!);
+            return;
+          }
+          
+          context.go('/dashboard');
         }, 
         icon: const Icon(Icons.arrow_back),
       ),

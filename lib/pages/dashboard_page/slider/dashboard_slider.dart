@@ -59,7 +59,7 @@ class _DashboardSliderState extends State<DashboardSlider> {
                               navBtn.dashboardSliderButtonsConfig[index]['text'],
                               style: TextStylesConst.primaryTextStyle,
                             ),
-                            onPressed: navBtn.dashboardSliderButtonsConfig[index]['onPressed'],
+                            routeDestination: navBtn.dashboardSliderButtonsConfig[index]['routeDestination'],
                           ),
                         ),
                     ],

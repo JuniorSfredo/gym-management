@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/domain/models/aluno.dart';
 import 'package:gym_management/pages/dashboard_page/footer/buttons/footer_button.dart';
 import 'package:gym_management/pages/profile_page/profile_page.dart';
@@ -35,12 +36,7 @@ class DashboardFooter extends StatelessWidget {
                 width: width / 2,
                 height: height,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => ProfilePage(aluno: aluno),
-                    ),
-                  );
+                  context.go('/profile/${aluno.id}');
                 },
                 icon: FontAwesomeIcons.user,
               )),

@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:gym_management/domain/models/Treino.dart';
+import 'package:gym_management/domain/models/treino.dart';
 import 'package:gym_management/domain/services/api_service.dart';
 import 'package:http/http.dart' as http;
 

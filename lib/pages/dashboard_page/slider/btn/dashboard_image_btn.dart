@@ -1,15 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 
 class DashboardImageBtn extends StatelessWidget {
   
   final Text btnText;
-  final VoidCallback onPressed;
+  final String routeDestination;
 
   const DashboardImageBtn({
     super.key,
     required this.btnText,
-    required this.onPressed,
+    required this.routeDestination,
   });
 
   @override
@@ -24,7 +25,9 @@ class DashboardImageBtn extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
           ),
         ),
-        onPressed: onPressed,
+        onPressed: () {
+          context.go(routeDestination);
+        },
         child: btnText,
       ),
     );

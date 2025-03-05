@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:gym_management/domain/models/Treino.dart';
+import 'package:go_router/go_router.dart';
+import 'package:gym_management/domain/models/treino.dart';
 import 'package:gym_management/domain/services/treino_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 
@@ -42,14 +43,19 @@ class _TrainingPageState extends State<TrainingPage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: ColorsConst.btnLoginColor,
-          iconTheme: const IconThemeData(
-            color: Colors.white
+          leading: IconButton(
+            icon: const FaIcon(
+              FontAwesomeIcons.arrowLeft,
+              color: Colors.white,
+            ),
+            onPressed: () {
+              context.go('/dashboard');
+            },
           ),
           title: const Text(
             'Meus Treinos', 
             style: TextStyle(
               color: Colors.white,
-              fontWeight: FontWeight.bold,
             ),
           ),
         ),
@@ -87,14 +93,7 @@ class _TrainingPageState extends State<TrainingPage> {
                             ),
                             InkWell(
                               onTap: () {
-                                Navigator.pushNamed(
-                                  context,
-                                  '/alunos/alunoId/treinos/treinoId',
-                                  arguments: {
-                                    'alunoId': treinos[index].aluno.id,
-                                    'treinoId': treinos[index].id,
-                                  },
-                                );
+                                context.go('/alunos/1/treinos/${treinos.elementAt(index).id}');
                               },
                               child: const FaIcon(
                                 FontAwesomeIcons.circleInfo,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 
 class LoginPage extends StatefulWidget {
@@ -115,10 +116,7 @@ class _LoginPageState extends State<LoginPage> {
                         onPressed: () {
                           onPressedBtn();
                           if (!context.mounted) return;
-                          Navigator.pushNamed(
-                            context,
-                            '/dashboard',
-                          );
+                          context.go('/dashboard');
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: btnColor,

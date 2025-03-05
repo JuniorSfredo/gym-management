@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:gym_management/domain/models/aluno.dart';
+import 'package:gym_management/domain/services/aluno_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/formatters/formatter.dart';
+import 'package:gym_management/pages/common/widgets/app_bar_header.dart';
 import 'package:gym_management/pages/profile_page/update_profile_page/update_profile_page.dart';
 
 class ProfilePage extends StatefulWidget {
-  final Aluno aluno;
+
+  final int alunoId;
+
   const ProfilePage({
     super.key,
-    required this.aluno,
+    required this.alunoId,
   });
 
   @override
@@ -16,25 +20,42 @@ class ProfilePage extends StatefulWidget {
 }
 
 class _ProfilePageState extends State<ProfilePage> {
+
+  AlunoService alunoService = AlunoService();
+  late Aluno aluno;
+  bool isLoading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchAluno(widget.alunoId);
+  }
+
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.sizeOf(context).width;
     final double height = MediaQuery.sizeOf(context).height;
-    return SafeArea(
+    return isLoading ?
+    SafeArea(
       child: Scaffold(
-        appBar: AppBar(
-          iconTheme: const IconThemeData(
-            color: Colors.white,
+        appBar: const AppBarHeader(title: 'Meu perfil'),
+        body: Container(
+          width: width,
+          height: height,
+          decoration: const BoxDecoration(
+            color: ColorsConst.dashboardBackground,
           ),
-          title: const Text(
-            'Meu perfil',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 20,
+          child: const Center(
+            child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation<Color>(ColorsConst.btnLoginColor),
             ),
           ),
-          backgroundColor: ColorsConst.btnLoginColor,
         ),
+      ),
+    )
+    : SafeArea(
+      child: Scaffold(
+        appBar: const AppBarHeader(title: 'Meu perfil'),
         body: Container(
           width: width,
           height: height,
@@ -45,40 +66,48 @@ class _ProfilePageState extends State<ProfilePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ProfileHeader(pageWidth: width, pageHeight: height, nomeAluno: widget.aluno.nome),
+              ProfileHeader(pageWidth: width, pageHeight: height, nomeAluno: aluno.nome),
               const SizedBox(height: 10),
               ComponentListProfile(
                 campo: 'Nome:',
-                componente: widget.aluno.nome,
+                componente: aluno.nome,
               ),
               ComponentListProfile(
                 campo: 'Altura:',
-                componente: '${widget.aluno.altura}m',
+                componente: '${aluno.altura}m',
               ),
               ComponentListProfile(
                 campo: 'Peso:',
-                componente: '${widget.aluno.peso}Kg',
+                componente: '${aluno.peso}Kg',
               ),
               ComponentListProfile(
                 campo: 'Data de Nascimento:',
-                componente: Formatter.formatarData(widget.aluno.dataNascimento),
+                componente: Formatter.formatarData(aluno.dataNascimento),
               ),
               ComponentListProfile(
                 campo: 'Ativo',
-                componente: widget.aluno.ativo ? 'Sim' : 'Não',
+                componente: aluno.ativo ? 'Sim' : 'Não',
               ),
               ComponentListProfile(
                 campo: 'Endereço:',
-                componente: widget.aluno.endereco,
+                componente: aluno.endereco,
               ),
-              const SizedBox(height: 10),
-              Center(child: UpdateProfileButton(pageWidth: width, pageHeight: height, aluno: widget.aluno)),
+              const SizedBox(height: 20),
+              Center(child: UpdateProfileButton(pageWidth: width, pageHeight: height, aluno: aluno)),
             ],
           ),
         ),
       ),
     );
   }
+
+  void fetchAluno(int alunoId) async {
+    aluno = await alunoService.fetchAlunoById(alunoId);
+    setState(() {
+      isLoading = false;
+    });
+  }
+
 }
 
 class ComponentListProfile extends StatelessWidget {
@@ -199,7 +228,7 @@ class UpdateProfileButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(15),
         ),
-        fixedSize: Size(pageWidth * 0.6, 60),
+        fixedSize: Size(pageWidth * 0.6, 50),
       ),
       onPressed: () {
         Navigator.push(
@@ -213,7 +242,7 @@ class UpdateProfileButton extends StatelessWidget {
         'Atualizar Perfil',
         style: TextStyle(
           color: Colors.white,
-          fontSize: 18,
+          fontSize: 16,
         ),
       ),
     );

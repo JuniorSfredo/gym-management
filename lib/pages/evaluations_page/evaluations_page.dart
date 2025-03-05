@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/domain/models/simplefied/avaliacao_simplefied.dart';
 import 'package:gym_management/domain/services/avaliacao_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
@@ -118,7 +119,15 @@ class _EvaluationPageState extends State<EvaluationPage> {
     return SafeArea(
         child: Scaffold(
       appBar: AppBar(
-        iconTheme: const IconThemeData(color: Colors.white),
+        leading: IconButton(
+          icon: const Icon(
+            FontAwesomeIcons.arrowLeft,
+            color: Colors.white,
+          ),
+          onPressed: () {
+            context.go('/evolution');
+          },
+        ),
         backgroundColor: ColorsConst.btnLoginColor,
         title: const Text(
           'Todas as avaliações',

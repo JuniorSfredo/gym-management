@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/domain/models/simplefied/avaliacao_simplefied.dart';
 import 'package:gym_management/domain/services/avaliacao_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
@@ -69,8 +70,9 @@ class _EvolutionPageState extends State<EvolutionPage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: ColorsConst.btnLoginColor,
-          leading: const BackButton(
+          leading: BackButton(
             color: Colors.white,
+            onPressed: () => GoRouter.of(context).go('/dashboard'),
           ),
           title: const Text(
             'Minha Evolução',
@@ -187,7 +189,7 @@ class _EvolutionPageState extends State<EvolutionPage> {
                   height: height * 0.07,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/evolutions/id');
+                      context.go('/evolutions/id');
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: ColorsConst.btnLoginColor,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 
 class SplashPage extends StatefulWidget {
@@ -15,10 +16,7 @@ class _SplashPageState extends State<SplashPage> {
     super.initState();
     Future.delayed(const Duration(seconds: 4), () {
       if (!mounted) return; 
-      Navigator.pushNamed(
-        context,
-        '/login'
-      );
+      context.go('/login');
     });
   }
 

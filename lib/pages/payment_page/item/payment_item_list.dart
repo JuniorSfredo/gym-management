@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/domain/models/Mensalidade.dart';
 import 'package:gym_management/domain/models/enums/status_pagemento.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
@@ -25,11 +26,7 @@ class PaymentItemList extends StatelessWidget {
           ),
         ),
         onPressed: () {
-              print(mensalidade.id);
-          Navigator.pushNamed(
-            context, '/mensalidades/id', 
-            arguments: mensalidade.id
-          );
+          context.go('/mensalidades/${mensalidade.id}');
         },
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

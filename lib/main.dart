@@ -4,5 +4,5 @@ import 'package:gym_management/app.dart';
 
 void main() async {
   await dotenv.load();
-  runApp(const GymManagementApp());
+  runApp(GymManagementApp());
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:gym_management/domain/models/exercicio.dart';
-import 'package:gym_management/domain/models/Treino.dart';
+import 'package:gym_management/domain/models/treino.dart';
 import 'package:gym_management/domain/services/treino_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/constants/text_style_const.dart';
@@ -64,7 +65,15 @@ class _DescTrainingPageState extends State<DescTrainingPage> {
             : Scaffold(
                 appBar: AppBar(
                   backgroundColor: ColorsConst.btnLoginColor,
-                  iconTheme: const IconThemeData(color: Colors.white),
+                  leading: IconButton(
+                      onPressed: () {
+                        context.go('/training');
+                      },
+                      icon: const Icon(
+                        Icons.arrow_back,
+                        color: Colors.white,
+                      ),
+                    ),
                   title: Text(
                     treino.nome,
                     style: const TextStyle(
