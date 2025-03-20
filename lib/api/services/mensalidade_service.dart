@@ -1,8 +1,8 @@
 import 'dart:convert';
 
-import 'package:gym_management/domain/models/Mensalidade.dart';
-import 'package:gym_management/domain/models/mensalidade_id.dart';
-import 'package:gym_management/domain/services/api_service.dart';
+import 'package:gym_management/api/models/mensalidade.dart';
+import 'package:gym_management/api/models/mensalidade_id.dart';
+import 'package:gym_management/api/services/api_service.dart';
 import 'package:http/http.dart' as http;
 
 class MensalidadeService {

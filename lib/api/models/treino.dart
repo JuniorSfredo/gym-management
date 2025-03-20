@@ -1,6 +1,6 @@
-import 'package:gym_management/domain/models/exercicio.dart';
-import 'package:gym_management/domain/models/references/aluno_reference.dart';
-import 'package:gym_management/domain/models/references/professor_reference.dart';
+import 'package:gym_management/api/models/exercicio.dart';
+import 'package:gym_management/api/models/references/aluno_reference.dart';
+import 'package:gym_management/api/models/references/professor_reference.dart';
 
 class Treino {
 

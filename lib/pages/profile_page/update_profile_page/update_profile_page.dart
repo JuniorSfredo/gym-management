@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/aluno.dart';
+import 'package:gym_management/api/models/aluno.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/profile_page/update_profile_page/button_update/update_profile_btn.dart';
 import 'package:gym_management/pages/profile_page/update_profile_page/form_update/form_profile_update.dart';

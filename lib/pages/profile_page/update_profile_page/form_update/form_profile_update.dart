@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/pages/common/formatters/formatter.dart';
+import 'package:gym_management/core/formatters/formatter.dart';
 import 'package:gym_management/pages/profile_page/update_profile_page/form_update/input_form_update.dart';
 
 class FormUpdateProfile extends StatelessWidget {

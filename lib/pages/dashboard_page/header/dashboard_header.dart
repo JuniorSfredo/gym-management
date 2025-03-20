@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/aluno.dart';
+import 'package:gym_management/api/models/aluno.dart';
 
 class DashboardHeader extends StatelessWidget {
   final Aluno aluno ;

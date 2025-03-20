@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:gym_management/domain/models/aluno.dart';
-import 'package:gym_management/domain/services/api_service.dart';
+import 'package:gym_management/api/models/aluno.dart';
+import 'package:gym_management/api/services/api_service.dart';
 import 'package:http/http.dart' as http;
 
 class AlunoService {

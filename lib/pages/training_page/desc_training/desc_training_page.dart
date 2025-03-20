@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_management/domain/models/exercicio.dart';
-import 'package:gym_management/domain/models/treino.dart';
-import 'package:gym_management/domain/services/treino_service.dart';
+import 'package:gym_management/api/models/exercicio.dart';
+import 'package:gym_management/api/models/treino.dart';
+import 'package:gym_management/api/services/treino_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/constants/text_style_const.dart';
 import 'package:gym_management/pages/training_page/desc_training/item/training_item.dart';

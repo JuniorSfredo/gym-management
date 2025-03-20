@@ -1,5 +1,5 @@
-import 'package:gym_management/domain/models/references/aluno_reference.dart';
-import 'package:gym_management/domain/models/references/plano_reference.dart';
+import 'package:gym_management/api/models/references/aluno_reference.dart';
+import 'package:gym_management/api/models/references/plano_reference.dart';
 
 class Mensalidade {
 

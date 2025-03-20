@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/professor.dart';
+import 'package:gym_management/api/models/professor.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 
 class ProfessionalsCard extends StatelessWidget {

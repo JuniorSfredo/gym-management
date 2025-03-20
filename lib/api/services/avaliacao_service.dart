@@ -1,7 +1,8 @@
 import 'dart:convert';
 
-import 'package:gym_management/domain/models/simplefied/avaliacao_simplefied.dart';
-import 'package:gym_management/domain/services/api_service.dart';
+import 'package:gym_management/api/models/avaliacao_request.dart';
+import 'package:gym_management/api/models/simplefied/avaliacao_simplefied.dart';
+import 'package:gym_management/api/services/api_service.dart';
 import 'package:http/http.dart' as http;
 
 class AvaliacaoService {
@@ -35,6 +36,19 @@ class AvaliacaoService {
       return AvaliacaoSimplefied.fromJSON(jsonDecode(response.body));
     } else {
       throw Exception('Failed to load avaliacao');
+    }
+  }
+
+  Future<void> requestAvaliacao (AvaliacaoRequest request) async {
+    final response = await http.post(
+      Uri.parse('${ApiServiceUrl.baseUrl}avaliacoes/requisitar-avaliacao'),
+      headers: <String, String>{
+        'Content-Type': 'application/json; charset=UTF-8',
+      },
+      body: jsonEncode(request.toJson()),
+    );
+    if (response.statusCode != 201) {
+      throw Exception('Failed to request avaliacao');
     }
   }
 }

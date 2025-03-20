@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/aluno.dart';
-import 'package:gym_management/domain/services/aluno_service.dart';
+import 'package:gym_management/api/models/aluno.dart';
+import 'package:gym_management/api/services/aluno_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
-import 'package:gym_management/pages/common/formatters/formatter.dart';
+import 'package:gym_management/core/formatters/formatter.dart';
 import 'package:gym_management/pages/common/widgets/app_bar_header.dart';
 import 'package:gym_management/pages/profile_page/update_profile_page/update_profile_page.dart';
 

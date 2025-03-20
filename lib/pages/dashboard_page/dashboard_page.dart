@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/aluno.dart';
+import 'package:gym_management/api/models/aluno.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/dashboard_page/footer/dashboard_footer.dart';
 import 'package:gym_management/pages/dashboard_page/header/dashboard_header.dart';
 import 'package:gym_management/pages/dashboard_page/navigation/dashboard_navigation.dart';
 import 'package:gym_management/pages/dashboard_page/slider/dashboard_slider.dart';
-import 'package:gym_management/domain/services/aluno_service.dart';
+import 'package:gym_management/api/services/aluno_service.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
