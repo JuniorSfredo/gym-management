@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_management/domain/models/simplefied/avaliacao_simplefied.dart';
-import 'package:gym_management/domain/services/avaliacao_service.dart';
+import 'package:gym_management/api/models/simplefied/avaliacao_simplefied.dart';
+import 'package:gym_management/api/services/avaliacao_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/evolution_page/chart/evolution_chart.dart';
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/Mensalidade.dart';
-import 'package:gym_management/domain/services/mensalidade_service.dart';
+import 'package:gym_management/api/models/mensalidade.dart';
+import 'package:gym_management/api/services/mensalidade_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/widgets/app_bar_header.dart';
 import 'package:gym_management/pages/payment_page/item/payment_item_list.dart';

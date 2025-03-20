@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_management/domain/models/Mensalidade.dart';
-import 'package:gym_management/domain/services/mensalidade_service.dart';
+import 'package:gym_management/api/models/mensalidade.dart';
+import 'package:gym_management/api/services/mensalidade_service.dart';
 
 class ButtonConfirmation extends StatefulWidget {
   final Mensalidade mensalidade;
   final Color btnColor;
   final String btnText;
 
-  ButtonConfirmation(
+  const ButtonConfirmation(
       {super.key,
       required this.btnColor,
       required this.btnText,

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_management/domain/models/Mensalidade.dart';
-import 'package:gym_management/domain/models/enums/status_pagemento.dart';
+import 'package:gym_management/api/models/enums/status_pagemento.dart';
+import 'package:gym_management/api/models/mensalidade.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
-import 'package:gym_management/pages/common/formatters/formatter.dart';
+import 'package:gym_management/core/formatters/formatter.dart';
 
 class PaymentItemList extends StatelessWidget {
   final Mensalidade mensalidade;

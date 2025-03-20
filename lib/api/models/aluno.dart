@@ -1,4 +1,4 @@
-import 'package:gym_management/domain/models/pessoa.dart';
+import 'package:gym_management/api/models/pessoa.dart';
 
 class Aluno extends Pessoa {
 

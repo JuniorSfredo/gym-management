@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-import 'package:gym_management/domain/models/simplefied/avaliacao_simplefied.dart';
-import 'package:gym_management/domain/services/avaliacao_service.dart';
+import 'package:gym_management/api/models/simplefied/avaliacao_simplefied.dart';
+import 'package:gym_management/api/services/avaliacao_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
-import 'package:gym_management/pages/common/formatters/formatter.dart';
+import 'package:gym_management/core/formatters/formatter.dart';
 import 'package:gym_management/pages/evaluations_page/box/evaluation_box_details.dart';
 
 class EvaluationPage extends StatefulWidget {

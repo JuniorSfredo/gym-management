@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/Mensalidade.dart';
-import 'package:gym_management/domain/models/enums/status_pagemento.dart';
-import 'package:gym_management/domain/services/mensalidade_service.dart';
+import 'package:gym_management/api/models/enums/status_pagemento.dart';
+import 'package:gym_management/api/models/mensalidade.dart';
+import 'package:gym_management/api/services/mensalidade_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
-import 'package:gym_management/pages/common/formatters/formatter.dart';
+import 'package:gym_management/core/formatters/formatter.dart';
 import 'package:gym_management/pages/common/widgets/app_bar_header.dart';
 import 'package:gym_management/pages/payment_page/details/box_confirmation/box_confirmation_widget.dart';
 import 'package:gym_management/pages/payment_page/details/field_value_item.dart';

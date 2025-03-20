@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/Mensalidade.dart';
+import 'package:gym_management/api/models/mensalidade.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/payment_page/details/box_confirmation/button_confirmation.dart';
 

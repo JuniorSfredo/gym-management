@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gym_management/domain/models/professor.dart';
-import 'package:gym_management/domain/services/professor_service.dart';
+import 'package:gym_management/api/models/professor.dart';
+import 'package:gym_management/api/services/professor_service.dart';
 import 'package:gym_management/pages/common/constants/colors_const.dart';
 import 'package:gym_management/pages/common/widgets/app_bar_header.dart';
 import 'package:gym_management/pages/professionals_page/card/professionals_card.dart';

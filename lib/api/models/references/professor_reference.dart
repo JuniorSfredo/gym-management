@@ -11,4 +11,11 @@ class ProfessorReference {
       json['nome'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'id': id,
+      'nome': nome,
+    };
+  }
 }
